@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace ASP.NET_WebApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GetMessageAsync getMessage = new GetMessageAsync();
+            await getMessage.PostAsync();
+            Console.ReadLine();
         }
     }
 }
